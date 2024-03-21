@@ -7,7 +7,7 @@ A CLI app written in Rust that generates Littlewood polynomials, finds their com
 - [ ] Create an executable that does all 3 in 1 go.
 - [ ] Add a progress bar while things generate
 ## Usage
-There are 4 executables, generate-littlewood, root-complex, plot-complex, and littlewood-rs. littlewood-rs is just a combined executable that does ther job of the other 3 executables at the same time.
+There are 4 executables, generate-littlewood, root-complex, plot-complex, and littlewood-rs. littlewood-rs is just a combined executable that does the job of the other 3 executables at the same time.
 ### generate-littlewood
 ```bash
 Usage: generate-littlewood[EXE] [OPTIONS]
@@ -30,9 +30,9 @@ So far I have only been able to test on Windows 11.
 - Rust 2021
 - Cargo
 ---
-1. Clone this repository and cd into the root.
+1. Clone this repository and cd into the folder of the module you want to build (project root is littlewood-rs)
 2. Run 
 ```bash
 cargo build --release
 ```
-Once finished, all 4 executable should be in ./target/release
+Once finished, the executable should be in ./target/release

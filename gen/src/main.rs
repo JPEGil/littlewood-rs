@@ -1,6 +1,7 @@
 use clap::Parser;
 use generate_littlewood::generate::gen_littlewood;
 use std::fs;
+use serde_json;
 
 #[derive(Debug, Parser)]
 #[command(version, about, long_about= None)]
@@ -17,6 +18,7 @@ struct Args{
 fn main() {
     let args = Args::parse();
 
-    let str = gen_littlewood(args.degree);
+    let polys = gen_littlewood(args.degree);
+    let str = serde_json::to_string(&polys).ok().unwrap();
     let _ = fs::write(args.file_path, str);
 }

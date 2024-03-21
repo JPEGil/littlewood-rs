@@ -103,10 +103,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "acbf1af155f9b9ef647e42cdc158db4b64a1b61f743629225fde6f3e0be2a7c7"
 
 [[package]]
-name = "draw"
-version = "0.1.0"
-
-[[package]]
 name = "generate-littlewood"
 version = "0.1.0"
 dependencies = [
@@ -145,6 +141,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "plot-complex"
+version = "0.1.0"
+
+[[package]]
 name = "poly"
 version = "0.1.0"
 dependencies = [
@@ -171,7 +171,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "root"
+name = "root-complex"
 version = "0.1.0"
 
 [[package]]
