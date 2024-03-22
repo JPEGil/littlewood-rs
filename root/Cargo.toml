@@ -6,10 +6,6 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-clap = { version = "4.5.3", features = ["derive"] }
-poly = {path = "../lib"}
-polynomen = {path = "../automatica/polynomen"}
-serde_json = "1.0.114"
 
 [lib]
 path = "./src/root.rs"

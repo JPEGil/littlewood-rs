@@ -15,7 +15,6 @@ clap = { version = "4.5.3", features = ["derive"] }
 poly = {path = "../lib"}
 serde_json = "1.0.114"
 heck = { version = "0.5.0-rc.1" }
-polynomen = {path = "../automatica/polynomen"}
 
 [lib]
 path = "./src/generate.rs"

@@ -1,4 +1,4 @@
-use generate_littlewood::gen_littlewood;
+use generate_littlewood::generate::gen_littlewood;
 fn main() {
     println!("Hello, world!");
 }
