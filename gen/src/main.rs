@@ -1,5 +1,5 @@
 use clap::Parser;
-use generate_littlewood::generate::gen_littlewood;
+use generate_littlewood::gen_littlewood;
 use std::fs;
 use serde_json;
 
@@ -19,6 +19,6 @@ fn main() {
     let args = Args::parse();
 
     let polys = gen_littlewood(args.degree);
-    let str = serde_json::to_string(&polys).ok().unwrap();
+    let str = serde_json::to_string_pretty(&polys).ok().unwrap();
     let _ = fs::write(args.file_path, str);
 }
