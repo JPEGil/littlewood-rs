@@ -7,7 +7,7 @@ edition = "2021"
 
 [dependencies]
 num-traits = "0.2.18"
-polynomen = {path = "../automatica/polynomen"}
+polynomen = "1.1.0"
 serde = {version="1.0.197", features = ["serde_derive"]}
 
 [lib]

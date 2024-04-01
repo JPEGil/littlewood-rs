@@ -1,8 +1,12 @@
-use poly::{PosONeg};
-use polynomen::Poly;
+use polynomen::Poly as AutoPoly;
 
-pub fn roots(polys: &Vec<Poly<f64>>){
+pub fn roots(polys: &Vec<AutoPoly<f64>>) -> Vec<(f64, f64)> {
+    let mut vec: Vec<(f64, f64)> = vec![];
     for p in polys {
-        p.complex_roots();
+        let roots = p.complex_roots();
+        for t in roots{
+            vec.push(t);
+        }
     }
+    vec
 }
