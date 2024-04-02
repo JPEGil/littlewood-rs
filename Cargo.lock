@@ -344,7 +344,7 @@ dependencies = [
 
 [[package]]
 name = "generate-littlewood"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "clap",
  "heck",
@@ -511,7 +511,7 @@ dependencies = [
 
 [[package]]
 name = "littlewood-rs"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "clap",
  "generate-littlewood",
@@ -703,7 +703,7 @@ checksum = "d231b230927b5e4ad203db57bbcbee2802f6bce620b1e4a9024a07d94e2907ec"
 
 [[package]]
 name = "plot-complex"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "clap",
  "image",
@@ -918,7 +918,7 @@ dependencies = [
 
 [[package]]
 name = "root-complex"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "clap",
  "poly",
