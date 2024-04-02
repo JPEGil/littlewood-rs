@@ -513,7 +513,10 @@ dependencies = [
 name = "littlewood-rs"
 version = "0.1.0"
 dependencies = [
+ "clap",
  "generate-littlewood",
+ "plot-complex",
+ "polynomen",
  "root-complex",
 ]
 

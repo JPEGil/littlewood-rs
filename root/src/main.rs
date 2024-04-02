@@ -6,7 +6,7 @@ use poly::Poly;
 use root_complex::roots;
 
 #[derive(Debug, Parser)]
-#[command(version, about, long_about= None)]
+#[command(version, about, long_about=None, disable_help_flag = true)]
 struct Args{
     ///Path of Polynomial file
     // Doesn't work without extra parens. DO NOT REMOVE EXTRA PARENTHESISES
@@ -17,6 +17,10 @@ struct Args{
     // Doesn't work without extra parens. DO NOT REMOVE EXTRA PARENTHESISES
     #[arg(short, long, default_value_t=("./Roots.json".to_owned()))]
     out_file_path: String,
+
+    ///Print help
+    #[arg(short='H', long, action = clap::ArgAction::HelpLong)]
+    help: Option<bool>,
 }
 
 fn main() {

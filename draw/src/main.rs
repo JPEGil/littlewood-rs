@@ -4,7 +4,7 @@ use std::fs;
 use plot_complex::plot_image;
 
 #[derive(Debug, Parser)]
-#[command(version, about, long_about= None)]
+#[command(version, about, long_about=None, disable_help_flag = true)]
 struct Args{
     ///Path of Roots file
     // Doesn't work without extra parens. DO NOT REMOVE EXTRA PARENTHESISES
@@ -23,13 +23,16 @@ struct Args{
     ///Height of image
     #[arg(short, long, default_value_t=6000)]
     height: u32,
+
+    ///Print help
+    #[arg(short='H', long, action = clap::ArgAction::HelpLong)]
+    help: Option<bool>,
 }
 fn main() {
     let args = Args::parse();
     let roots_str = fs::read_to_string(&args.roots_path).unwrap();
     let str = roots_str.as_str();
     let roots = serde_json::from_str::<Vec<(f64, f64)>>(str).unwrap();
-    // println!("{roots:?}");
     let buf = plot_image(&roots, args.width, args.height);
 
     let _ = buf.save(args.out_file_path);
