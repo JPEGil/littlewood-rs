@@ -16,4 +16,3 @@ pub fn gen_littlewood(degree: u128) -> Vec<Poly>{
 
         polys
     }
-}

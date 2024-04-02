@@ -1,5 +1,5 @@
 use clap::Parser;
-use generate_littlewood::generate::gen_littlewood;
+use generate_littlewood::gen_littlewood;
 use std::fs;
 use serde_json;
 

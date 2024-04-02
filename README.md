@@ -3,9 +3,10 @@ A CLI app written in Rust that generates Littlewood polynomials, finds their com
 ## TODO List
 - [x] Create executable that generates Littlewood polynomials.
 - [x] Create an executable that generates the roots of those polynomials.
-- [ ] Create an executable that plots those roots and returns an image of the fractal.
+- [x] Create an executable that plots those roots and returns an image of the fractal.
 - [ ] Create an executable that does all 3 in 1 go.
 - [ ] Add a progress bar while things generate
+- [ ] Fix zoom in plot-complex
 ## Usage
 There are 4 executables, generate-littlewood, root-complex, plot-complex, and littlewood-rs. littlewood-rs is just a combined executable that does the job of the other 3 executables at the same time.
 ### generate-littlewood
@@ -29,11 +30,21 @@ Options:
   -V, --version                        Print version
 ```
 ### plot-complex
-TODO
+```bash
+Usage: plot-complex[EXE] [OPTIONS]
+
+Options:
+  -r, --roots-path <ROOTS_PATH>        Path of Roots file [default: ./Roots.json]
+  -o, --out-file-path <OUT_FILE_PATH>  Path of Fractal Image file [default: ./Littlewood-Fractal.png]
+  -w, --width <WIDTH>                  Width of image [default: 800]
+  -h, --height <HEIGHT>                Height of image [default: 600]
+  --help                               Print help
+  -V, --version                        Print version
+```
 ### littlewood-rs
 TODO
 ## Building
-So far I have only been able to test on Windows 11.
+So far I have only been able to test on Windows 10/11.
 ### Prerequisites
 - Rust 2021
 - Cargo

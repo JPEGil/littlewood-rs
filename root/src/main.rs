@@ -31,6 +31,6 @@ fn main() {
         auto_polys.push(converted);
     }
     let roots = roots(&auto_polys);
-    let str = serde_json::to_string_pretty(&roots).ok().unwrap();
+    let str = serde_json::to_string(&roots).ok().unwrap();
     let _ = fs::write(args.out_file_path, str);
 }
