@@ -18,6 +18,10 @@ struct Args{
     #[arg(short, long, default_value_t=("./Roots.json".to_owned()))]
     out_file_path: String,
 
+    ///Throws out real number roots
+    #[arg(short, long, default_value_t=false)]
+    no_real: bool,
+
     ///Print help
     #[arg(short='H', long, action = clap::ArgAction::HelpLong)]
     help: Option<bool>,
@@ -34,7 +38,8 @@ fn main() {
         let converted:AutoPoly<f64> = AutoPoly::<f64>::from(p);
         auto_polys.push(converted);
     }
-    let roots = roots(&auto_polys);
+
+    let roots = roots(&auto_polys, args.no_real);
     let str = serde_json::to_string(&roots).ok().unwrap();
     let _ = fs::write(args.out_file_path, str);
 }
